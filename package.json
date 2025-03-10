@@ -2,6 +2,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.0.10",
     "@tailwindcss/vite": "^4.0.12",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "tailwindcss": "^4.0.12"
   }
 }
