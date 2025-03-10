@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="input.css" rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class=" w-11/12 mx-auto flex  py-4 justify-between align-middle items-center">
+      <div class="logo flex gap-3 items-center justify-between">
+        <img src="/images/logo.webp" alt="">
+        <h1 class="text-2xl font-bold">Peddy</h1>
+      </div>
+      <div class=" nav-links flex">
+        <div class="nav-link flex gap-6 items-center justify-between ">
+          <a href="/src/index.html" class="text-lg font-bold">Home</a>
+          <a href="#shop" class="text-lg font-bold">Shop</a>
+          <a href="#contact" class="text-lg font-bold">contact</a>
+        </div>
+      </div>
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+        <a href="/src/index.html">  <img alt="Tailwind CSS Navbar component"
+            src="/images/cat.png" /></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Main section -->
+  <main>
+
+    <section class="pt-24  justify-center items-center w-full ">
+      <h2 class="font-bold text-gray-600 text-center">
+        Bringing Families Together 🔥
+      </h2>
+      <h1 class="font-extrabold text-4xl text-black text-center py-2">
+        Your Path to Adoption Starts Here
+      </h1>
+      <p class="font-normal text-gray-600 text-center ">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a.
+      </p>
+
+      <a href="#shop"><button class="btn btn-primary flex justify-center mx-auto mt-12">View More</button></a>
+      <img class="justify-center items-center  mx-auto py-4" src="/images/pet.webp" alt="dog&cat">
+    </section>
+
+    <section class="pt-16 justify-center items-center w-full">
+      <h2 class="font-bold text-gray-800 text-3xl text-center">Adopt Your Best Friend</h2>
+      <p class="text-xl font-normal text-gray-500 text-center mx-auto">It is a long established fact that a reader will
+        be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+        that it has a.</p>
+
+    </section>
+
+    <nav id="categories" class="gap-2 flex justify-center py-12 "></nav>
+    
+    <div id="loadingSpinner" style="display: none; text-align: center; margin-top: 20px;">
+      <img class="justify-center items-center mx-auto " src="/images/Fading squares.gif" alt="Loading..." width="50">
+
+  </div>
+  
+
+    <section class="flex items-center justify-between md:px-4 lg:px-21 mx-auto py-4">
+      <h2 class="font-bold text-gray-700 lg:text-3xl text-center">Best Deal For you</h2>
+      <!-- <button class="btn btn-primary ">Sort By Price</button> -->
+        
+    <select id="sortOptions" class="btn btn-primary" onchange="sortPetsByPrice()">
+      <option value="default">Sort By Price:(Default)</option>
+      <option value="low-to-high">Sort by Price: Low to High</option>
+      <option value="high-to-low">Sort by Price: High to Low</option>
+  </select>
+    </section>
+
+  
+    <section id="shop" class="grid grid-cols-5  ">
+      <div id="pets" class="w-full col-span-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:py-10 lg:px-21"></div>
+      <div id="petLike" class="gap-6  card bg-base-100  drop-shadow-lg mt-10 mr-4 ">
+        <div id="likedPetsContainer" class="grid grid-cols-2 gap-4 mx-auto p-2"></div>
+      </div>
+    </section>
+
+  
+<!-- Adoption Modal using <dialog> -->
+  <dialog id="customAdoptModal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+        <div id="adopt-content"></div>
+        </div>
+    </div>
+</dialog>
+
+    <!-- Open the modal using ID.showModal() method -->
+<button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+<dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-content"></div>
+    <div class="pt-10" >
+      <form method="dialog">
+        <!-- if there is a button in form, it will Cencel the modal -->
+        <button class="btn w-full">Cencel</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    <section>
+      <footer class="footer sm:footer-horizontal bg-base-200 text-base-content justify-between p-10">
+        <nav id="contact">
+          <h2 class=" flex gap-3 justify-center items-center font-bold text-3xl">
+            <img class="logo w-11/12" src="/images/logo.webp" alt="" srcset="">
+            Peddy
+          </h2>
+          <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+          <a class="link link-hover">Phone:+31859644725</a>
+          <a class="link link-hover">Email: info@yourdomain.com</a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM </a>
+          <div class="gap-5 flex justify-between ">
+            <a class="link link-hover" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a class="link link-hover" href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="link link-hover" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a class="link link-hover" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+          </div>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Useful Links</h6>
+          <a href="/src/index.html" class="link link-hover">Home</a>
+          <a class="link link-hover">About us</a>
+          <a href="#shop" class="link link-hover">Animals</a>
+          <a href="#fnjoin" class="link link-hover">Foundation</a>
+          <a href="#contact" class="link link-hover">Contact</a>
+
+        </nav>
+        <form>
+          <h6 class="footer-title">Drop a Message</h6>
+          <fieldset class="w-80">
+
+            <div id="fnjoin" class="join">
+              <input type="text" placeholder="Enter your email" class="input input-bordered join-item" />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="/script/peddy.js"></script>
+  <script src="/src/input.css"></script>
+</body>
+
+</html>
+
+
+
