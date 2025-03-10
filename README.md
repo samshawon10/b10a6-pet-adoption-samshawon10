@@ -18,4 +18,4 @@ Pet Adopt Shop is a fully responsive web application that allows users to browse
 - **Async/Await** for fetching API data asynchronously.
 
 ## Live Demo
-[View Live Project]([https://pet-adopt-shop.surge.sh])
+[View Live Project]([https://pet-adopt-shop.surge.sh](https://pet-adopt-shop.surge.sh/))
