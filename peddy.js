@@ -119,7 +119,7 @@ const adoptDetails = (petId) => {
 
     const adoptContainer = document.getElementById("adopt-content");
     adoptContainer.innerHTML = `
-       <div class="w-full"> <img class="w-[50px] justify-center items-center mx-auto " src="assets/deal.png"/> </div>
+       <div class="w-full"> <img class="w-[50px] justify-center items-center mx-auto " src="/assets/deal.png"/> </div>
         <h2 class="text-2xl font-bold text-center">Congratulations!</h2>
         <p class=" text-center">Adoption is successful!</p>
         <p class="text-center">Thank you for adopting a pet!</p>
@@ -174,7 +174,7 @@ const displayPet = (pets) => {
         petContainer.classList.remove("grid");
         petContainer.innerHTML = `
         <div class="text-center mx-auto text-2xl text-gray-600 mt-10 justify-center items-center flex flex-col ">
-        <img class=" mx-auto" src ="assets/error.webp"/>
+        <img class=" mx-auto" src ="/assets/error.webp"/>
         <h1 class="text-4xl text-black font-bold ">No Information Available.</h1>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
         
